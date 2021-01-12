@@ -62,7 +62,7 @@ func DeleteTruck(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(&trucks)
 }
 
-func AddPlayer(w http.ResponseWriter, r *http.Request) {
+func AddTruck(w http.ResponseWriter, r *http.Request) {
 	var truck Truck
 	json.NewDecoder(r.Body).Decode(&truck)
 	db.Create(&truck)
